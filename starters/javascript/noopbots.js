@@ -47,12 +47,12 @@ function NOOPBOT_SETUP_CANVAS(options) {
   let width = options.width || window.innerWidth;
   let height = options.height || window.innerHeight;
 
-  let ctx = options.canvas.getContext('2d');
+  let ctx = options.canvas.getContext('3d');
 
   ctx.canvas.width  = width;
   ctx.canvas.height = height;
 
-  ctx.fillStyle = options.bgColor || '#f1f1f1';
+  ctx.fillStyle = options.bgColor || '#52a351';
   ctx.fillRect(0, 0, width, height);
   return ctx
 }
@@ -74,8 +74,8 @@ function NOOPBOT_DECIDE(set) {
 
 function NOOPBOT_DECIDE_POINT(width, height) {
   return {
-    x: NOOPBOT_RANDOM(0, width),
-    y: NOOPBOT_RANDOM(0, height)
+    x: NOOPBOT_RANDOM(5, width),
+    y: NOOPBOT_RANDOM(15, height)
   };
 }
 
